@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - custom-net
+
+volumes:
+  mongo-data:
+
+networks:
+  custom-net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.100.0/24

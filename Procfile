@@ -1,0 +1,1 @@
+web: brandscan-api
