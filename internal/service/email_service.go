@@ -13,7 +13,7 @@ func SendEmail(apiKey, fromEmail, toEmail, subject, message string) error {
 
 	from := mailersend.From{
 		Name:  "Your Name",
-		Email: "eliton@trial-ynrw7gyne7n42k8e.mlsender.net",
+		Email: "EMAIL",
 	}
 
 	recipients := []mailersend.Recipient{
