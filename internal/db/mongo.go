@@ -44,16 +44,6 @@ func ConnectMongo() {
 	log.Println("Connected to MongoDB!")
 }
 
-func SaveRequest(query, email string, domains []string) error {
-	collection := Client.Database("brandscan").Collection("requests")
-
-	doc := map[string]interface{}{
-		"query":   query,
-		"email":   email,
-		"domains": domains,
-		"created": time.Now(),
-	}
-
 	_, err := collection.InsertOne(context.Background(), doc)
 	return err
 }
